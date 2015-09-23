@@ -1,0 +1,33 @@
+<bpel:process targetNamespace="ro.utcluj" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/abstract" name="abstract">
+  <bpel:flow>
+    <bpel:if probability="0.5">
+      <bpel:else probability="0.5">
+        <bpel:invoke name="WebService_AA"/>
+        <bpel:if probability="0.27">
+          <bpel:while repeat="77"/>
+          <bpel:invoke name="WebService_AB"/>
+        </bpel:if>
+        <bpel:flow/>
+        <bpel:flow/>
+      </bpel:else>
+    </bpel:if>
+    <bpel:if probability="0.41">
+      <bpel:if probability="0.94"/>
+      <bpel:sequence name="main"/>
+    </bpel:if>
+    <bpel:if probability="0.05">
+      <bpel:else probability="0.95"/>
+    </bpel:if>
+    <bpel:flow/>
+    <bpel:flow>
+      <bpel:flow/>
+    </bpel:flow>
+  </bpel:flow>
+  <bpel:invoke name="WebService_AC"/>
+  <bpel:flow>
+    <bpel:flow>
+      <bpel:invoke name="WebService_AD"/>
+    </bpel:flow>
+  </bpel:flow>
+  <bpel:invoke name="WebService_AE"/>
+</bpel:process>

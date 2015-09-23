@@ -1,0 +1,128 @@
+<bpel:process targetNamespace="ro.utcluj" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/abstract" name="abstract">
+  <bpel:flow>
+    <bpel:flow>
+      <bpel:if probability="0.17">
+        <bpel:else probability="0.83">
+          <bpel:if probability="0.97"/>
+          <bpel:flow/>
+        </bpel:else>
+      </bpel:if>
+    </bpel:flow>
+    <bpel:while repeat="23">
+      <bpel:invoke name="WebService_AA"/>
+      <bpel:sequence name="main"/>
+      <bpel:flow/>
+    </bpel:while>
+    <bpel:flow>
+      <bpel:if probability="0.51"/>
+    </bpel:flow>
+    <bpel:while repeat="3"/>
+  </bpel:flow>
+  <bpel:if probability="0.01">
+    <bpel:else probability="0.99"/>
+    <bpel:sequence name="main">
+      <bpel:while repeat="86">
+        <bpel:if probability="0.23"/>
+      </bpel:while>
+    </bpel:sequence>
+    <bpel:while repeat="85"/>
+    <bpel:invoke name="WebService_AB"/>
+  </bpel:if>
+  <bpel:flow>
+    <bpel:invoke name="WebService_AC"/>
+    <bpel:while repeat="16">
+      <bpel:sequence name="main">
+        <bpel:sequence name="main"/>
+        <bpel:invoke name="WebService_AD"/>
+      </bpel:sequence>
+      <bpel:if probability="0.54">
+        <bpel:else probability="0.45999999999999996"/>
+      </bpel:if>
+      <bpel:sequence name="main">
+        <bpel:invoke name="WebService_AE"/>
+      </bpel:sequence>
+      <bpel:sequence name="main"/>
+      <bpel:if probability="0.79">
+        <bpel:else probability="0.20999999999999996"/>
+      </bpel:if>
+    </bpel:while>
+    <bpel:if probability="0.97">
+      <bpel:else probability="0.030000000000000027"/>
+    </bpel:if>
+  </bpel:flow>
+  <bpel:while repeat="66">
+    <bpel:invoke name="WebService_AF"/>
+    <bpel:while repeat="11"/>
+    <bpel:sequence name="main"/>
+  </bpel:while>
+  <bpel:flow>
+    <bpel:invoke name="WebService_AG"/>
+    <bpel:invoke name="WebService_AH"/>
+    <bpel:invoke name="WebService_AI"/>
+    <bpel:invoke name="WebService_AJ"/>
+    <bpel:while repeat="2"/>
+    <bpel:invoke name="WebService_AK"/>
+  </bpel:flow>
+  <bpel:invoke name="WebService_AL"/>
+  <bpel:while repeat="87">
+    <bpel:if probability="0.84">
+      <bpel:else probability="0.16000000000000003"/>
+      <bpel:invoke name="WebService_AM"/>
+    </bpel:if>
+    <bpel:flow/>
+  </bpel:while>
+  <bpel:flow>
+    <bpel:flow>
+      <bpel:if probability="0.9">
+        <bpel:else probability="0.09999999999999998"/>
+      </bpel:if>
+    </bpel:flow>
+  </bpel:flow>
+  <bpel:invoke name="WebService_AN"/>
+  <bpel:if probability="0.0">
+    <bpel:else probability="1.0">
+      <bpel:while repeat="94">
+        <bpel:sequence name="main">
+          <bpel:if probability="0.66">
+            <bpel:else probability="0.33999999999999997"/>
+          </bpel:if>
+        </bpel:sequence>
+      </bpel:while>
+    </bpel:else>
+  </bpel:if>
+  <bpel:invoke name="WebService_AO"/>
+  <bpel:while repeat="59">
+    <bpel:sequence name="main"/>
+  </bpel:while>
+  <bpel:invoke name="WebService_AP"/>
+  <bpel:flow/>
+  <bpel:if probability="0.14">
+    <bpel:sequence name="main"/>
+  </bpel:if>
+  <bpel:invoke name="WebService_AQ"/>
+  <bpel:if probability="0.23">
+    <bpel:else probability="0.77">
+      <bpel:invoke name="WebService_AR"/>
+    </bpel:else>
+  </bpel:if>
+  <bpel:while repeat="50"/>
+  <bpel:sequence name="main">
+    <bpel:sequence name="main"/>
+  </bpel:sequence>
+  <bpel:sequence name="main">
+    <bpel:if probability="0.26"/>
+  </bpel:sequence>
+  <bpel:if probability="0.15">
+    <bpel:else probability="0.85"/>
+    <bpel:while repeat="32"/>
+  </bpel:if>
+  <bpel:if probability="0.92"/>
+  <bpel:invoke name="WebService_AS"/>
+  <bpel:sequence name="main"/>
+  <bpel:if probability="0.24">
+    <bpel:else probability="0.76"/>
+  </bpel:if>
+  <bpel:sequence name="main"/>
+  <bpel:flow/>
+  <bpel:invoke name="WebService_AT"/>
+</bpel:process>
