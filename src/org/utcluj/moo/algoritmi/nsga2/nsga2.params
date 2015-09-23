@@ -1,0 +1,27 @@
+# Parametrii pt algoritmul nsga2
+
+parent.0 = ../moo.params
+
+#eval.problem = org.utcluj.moo.nsga2.NSGA2Problem
+eval.problem = org.utcluj.moo.IntProblem
+
+eval = ec.multiobjective.nsga2.NSGA2Evaluator
+breed = ec.multiobjective.nsga2.NSGA2Breeder
+pop.subpop.0.species.fitness = ec.multiobjective.nsga2.NSGA2MultiObjectiveFitness
+
+pop.subpop.0.species.fitness.maximize = false
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+pop.subpop.0.species.genome-size = 30
+pop.subpop.0.species.mutation-prob = 0.0333
+
+pop.subpop.0.size = 100
+generations = 250
+
+pop.subpop.0.species.pipe = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.likelihood = 1.0
+pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0.likelihood = 0.9
+pop.subpop.0.species.pipe.source.0.source.0 = ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1 = same
+select.tournament.size = 4

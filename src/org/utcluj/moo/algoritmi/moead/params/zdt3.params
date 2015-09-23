@@ -1,0 +1,9 @@
+parent.0 = moead.params
+
+tip = zdt3
+pop.subpop.0.species.min-gene = 0;
+pop.subpop.0.species.max-gene = 1
+pop.subpop.0.species.genome-size = 30
+pop.subpop.0.species.mutation-prob = 0.0333
+
+stat = moead.StatisticiMOEAD

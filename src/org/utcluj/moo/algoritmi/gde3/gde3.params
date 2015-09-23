@@ -1,0 +1,73 @@
+verbosity = 0
+
+#daca vreau sa profit de procesor fol 2 thread-uri (cate unul pt fiecare thread)
+#evalthreads = 2
+#breedthreads = 2
+#seed.0 = time
+#seed.1 = time
+
+evalthreads = 1
+breedthreads = 1
+seed.0 = time
+
+checkpoint = false
+checkpoint-modulo = 1
+prefix = ec
+
+eval.problem = org.utcluj.moo.DoubleProblem
+
+state = ec.simple.SimpleEvolutionState
+init = ec.simple.SimpleInitializer
+finish = ec.simple.SimpleFinisher
+exch = ec.simple.SimpleExchanger
+
+breed = org.utcluj.moo.algoritmi.gde3.GDE3Breeder
+eval = org.utcluj.moo.algoritmi.gde3.GDE3Evaluator
+
+quit-on-run-complete = true
+generations = 100
+
+#cr - uniform crossover ratio
+breed.cr = 0.3
+breed.f = 0.2
+breed.f-noise = 0.001
+breed.pf = 0.5
+
+pop = ec.Population
+pop.subpops = 1
+
+#print-params = true
+#print-accessed-params = true
+
+pop.subpop.0 = ec.Subpopulation
+pop.subpop.0.size = 100
+pop.subpop.0.duplicate-retries = 30
+pop.subpop.0.species = ec.vector.FloatVectorSpecies
+pop.subpop.0.species.ind = ec.vector.DoubleVectorIndividual
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1 
+pop.subpop.0.species.genome-size = 20
+pop.subpop.0.species.fitness = org.utcluj.moo.algoritmi.gde3.GDE3Fitness
+#pop.subpop.0.species.fitness = ec.multiobjective.MultiObjectiveFitness
+
+pop.subpop.0.species.pipe = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.likelihood = 1.0
+pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0.likelihood = 0.9
+pop.subpop.0.species.pipe.source.0.source.0 = ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1 = same
+select.tournament.size = 2
+
+
+pop.subpop.0.species.mutation-type = polynomial
+pop.subpop.0.species.mutation-distribution-index = 20
+pop.subpop.0.species.mutation-bounded = true
+pop.subpop.0.species.mutation-prob = 0.0333
+
+pop.subpop.0.species.crossover-type = sbx
+pop.subpop.0.species.crossover-distribution-index = 20
+
+multi.fitness.num-objectives = 2
+pop.subpop.0.species.fitness.maximize = false
+
+stat = org.utcluj.moo.Statistici

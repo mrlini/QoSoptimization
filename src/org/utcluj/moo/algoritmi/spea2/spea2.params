@@ -1,0 +1,31 @@
+# Parametrii pentru SPEA2
+
+parent.0 = ../moo.params
+
+#eval.problem = org.utcluj.moo.spea2.SPEA2Problem
+eval.problem = org.utcluj.moo.IntProblem
+
+eval = ec.multiobjective.spea2.SPEA2Evaluator
+breed = ec.multiobjective.spea2.SPEA2Breeder
+pop.subpop.0.species.fitness = ec.multiobjective.spea2.SPEA2MultiObjectiveFitness
+
+#fata de nsga2 alg spea2, la nsga2 arhiva este o populatie externa. pt a genera un nr 
+#echivalent de indivizi cu nsga2 tb def o pop mai mare(dim pop nsga2 + dim arhivei)
+pop.subpop.0.size = 150
+#dim arhivei, nu tb sa fie mai mare decat populatia!!!!!!
+breed.elite.0 = 50
+generations = 250
+
+pop.subpop.0.species.fitness.maximize = false
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+pop.subpop.0.species.genome-size = 30
+pop.subpop.0.species.mutation-prob = 0.0333
+
+pop.subpop.0.species.pipe = ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.likelihood = 1.0
+pop.subpop.0.species.pipe.source.0 = ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0.likelihood = 0.9
+pop.subpop.0.species.pipe.source.0.source.0 = ec.multiobjective.spea2.SPEA2TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1 = same
+select.tournament.size = 2

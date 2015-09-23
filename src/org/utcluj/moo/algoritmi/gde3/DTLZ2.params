@@ -1,0 +1,19 @@
+# parametrii pt problema de test DTLZ2
+
+parent.0 = gde3.params
+
+eval.problem.type = dtlz2
+pop.subpop.0.species.fitness.maximize = false
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+pop.subpop.0.species.genome-size = 12
+pop.subpop.0.species.mutation-prob = 0.0333
+
+pop.subpop.0.species.fitness.num-objectives = 3
+#arhiva+pop
+pop.subpop.0.size = 500
+generations = 150
+
+stat = org.utcluj.moo.gde3.Statistici
+
+eval.problem = org.utcluj.moo.gde3.MooSuite
