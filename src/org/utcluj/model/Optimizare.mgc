@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="org.utcluj.ecj.LongGenomeEvaluator" x="498" y="435">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.utcluj.ecj.BaseGenomeEvaluator"/>
+    </Class>
+    <Class name="org.utcluj.ecj.DefaultGenomeEvaluator" x="115" y="363">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.utcluj.ecj.IGenomeEvaluator"
+            endpointName="genomeEvaluator" kind="Simple"/>
+        <Communication destinationClassName="org.utcluj.ecj.IGenomeEvaluator"/>
+    </Class>
+    <Class name="org.utcluj.fitness.GlobalFitness.AGGREGATE" x="286" y="137">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.utcluj.ecj.IGenomeEvaluator" x="379" y="208">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.utcluj.ecj.BaseGenomeEvaluator" x="382" y="307">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.utcluj.ecj.IGenomeEvaluator"/>
+        <Communication destinationClassName="org.utcluj.fitness.GlobalFitness"/>
+    </Class>
+    <Class name="org.utcluj.ecj.ShortGenomeEvaluator" x="203" y="441">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.utcluj.ecj.BaseGenomeEvaluator"/>
+    </Class>
+    <Class name="org.utcluj.fitness.GlobalFitness" x="131" y="207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.utcluj.fitness.GlobalFitness.FITNESS_FUNCTION"
+            endpointName="fitnessType" kind="Simple"/>
+        <Association
+            destinationClassName="org.utcluj.fitness.GlobalFitness.AGGREGATE"
+            endpointName="aggregateType" kind="Simple"/>
+        <Communication destinationClassName="org.utcluj.fitness.FuzzyFitness"/>
+    </Class>
+    <Class name="org.utcluj.fitness.FuzzyFitness" x="387" y="50">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.utcluj.fitness.GlobalFitness.FITNESS_FUNCTION"
+        x="149" y="49">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.utcluj.ecj.IntGenomeEvaluator" x="295" y="515">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="false"
+            default-accepted="false" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.utcluj.ecj.BaseGenomeEvaluator"/>
+    </Class>
+</ClassDiagram>
