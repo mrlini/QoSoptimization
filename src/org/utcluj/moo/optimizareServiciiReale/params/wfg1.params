@@ -1,0 +1,40 @@
+parent.0 = ParametriiMultiPop.params
+
+tip = wfg1
+k_WFG = 4
+
+pop.subpop.0.species.genome-size = 24
+
+pop.subpop.0.species.max-gene.0 = 2
+pop.subpop.0.species.max-gene.1 = 4
+pop.subpop.0.species.max-gene.2 = 6
+pop.subpop.0.species.max-gene.3 = 8
+pop.subpop.0.species.max-gene.4 = 10
+pop.subpop.0.species.max-gene.5 = 12
+pop.subpop.0.species.max-gene.6 = 14
+pop.subpop.0.species.max-gene.7 = 16
+pop.subpop.0.species.max-gene.8 = 18
+pop.subpop.0.species.max-gene.9 = 20
+pop.subpop.0.species.max-gene.10 = 22
+pop.subpop.0.species.max-gene.11 = 24
+pop.subpop.0.species.max-gene.12 = 26
+pop.subpop.0.species.max-gene.13 = 28
+pop.subpop.0.species.max-gene.14 = 30
+pop.subpop.0.species.max-gene.15 = 32
+pop.subpop.0.species.max-gene.16 = 34
+pop.subpop.0.species.max-gene.17 = 36
+pop.subpop.0.species.max-gene.18 = 38
+pop.subpop.0.species.max-gene.19 = 40
+pop.subpop.0.species.max-gene.20 = 42
+pop.subpop.0.species.max-gene.21 = 44
+pop.subpop.0.species.max-gene.22 = 46
+pop.subpop.0.species.max-gene.23 = 48
+
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 48
+
+pop.subpop.0.species.fitness.maximize = false
+pop.subpop.0.species.fitness.num-objectives = 2
+pop.subpop.0.species.mutation-prob = 0.0333
+
+stat = resonanceSearch.Statistici

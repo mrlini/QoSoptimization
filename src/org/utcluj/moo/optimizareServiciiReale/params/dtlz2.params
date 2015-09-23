@@ -1,0 +1,9 @@
+parent.0 = ParametriiMultiPop.params
+
+tip = DTLZ2
+pop.subpop.0.species.min-gene = 0
+pop.subpop.0.species.max-gene = 1
+pop.subpop.0.species.genome-size = 12
+pop.subpop.0.species.mutation-prob = 0.0333
+
+stat = resonanceSearch.Statistici
