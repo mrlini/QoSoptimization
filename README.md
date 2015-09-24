@@ -8,5 +8,7 @@ For running the algorithms on the QoS optimization problem see class MainServici
 If you have any questions please contact us.
 
 Contact info:
+
 Marcel Cremene - cremene (at) com (dot) utcluj (dot) ro
+
 Mihai Suciu - mihai.suciu (at) ubbcluhj (dot) ro
